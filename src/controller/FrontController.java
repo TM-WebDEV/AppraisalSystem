@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import controller.appraisal.ListGoal;
+
 @WebServlet("*.eze")
 public class FrontController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -35,10 +37,10 @@ public class FrontController extends HttpServlet {
 		ActionForward forward = null;
 		Action action = null;
 
-		// switch (command) {
-		// case "/liststudent.etv":
-		// action = new StudentList();
-		// break;
+		switch (command) {
+		case "/liststudent.eze":
+			action = new ListGoal();
+			break;
 		// case "/addstudent.etv":
 		// action = new StudentInsert();
 		// break;
@@ -54,12 +56,12 @@ public class FrontController extends HttpServlet {
 		// case "/validation.etv":
 		// action = new StudentValidation();
 		// break;
-		// default:
-		// forward = new ActionForward();
-		// forward.setPath("404.jsp");
-		// forward.setRedirect(false);
-		// break;
-		// }
+		default:
+			forward = new ActionForward();
+			forward.setPath("404.jsp");
+			forward.setRedirect(false);
+			break;
+		}
 
 		try {
 			forward = action.execute(request, response);

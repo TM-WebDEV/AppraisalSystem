@@ -1,0 +1,5 @@
+<Context>
+	<Resource name="dbappraisal" auth="Container" type="javax.sql.DataSource"
+		maxActive="15" maxIdle="20" username="root" password="123456"
+		driverClassName="com.mysql.jdbc.Driver" url="jdbc:mysql://localhost:3306/dbappraisal" />
+</Context>
