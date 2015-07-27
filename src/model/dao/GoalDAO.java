@@ -20,7 +20,7 @@ public class GoalDAO {
 		this.conn = ds.getConnection();
 	}
 
-	public ArrayList<GoalDTO> listGoal(String goalID, String goal, String kpi, String resource, String status,
+	public ArrayList<GoalDTO> listGoal(String goalID, String goal, String kpi, String result, String resource, String status,
 			String period) throws SQLException {
 		String sql = "SELECT * FROM tblgoaloliver ORDER By goal_num ASC";
 		PreparedStatement ps = conn.prepareStatement(sql);
@@ -32,6 +32,7 @@ public class GoalDAO {
 				g.setGoalID(rs.getString("goal_id"));
 				g.setGoal(rs.getString("goal"));
 				g.setKpi(rs.getString("kpi"));
+				g.setResult(rs.getString("result"));
 				g.setResource(rs.getString("resource"));
 				g.setStatus(rs.getInt("status"));
 				g.setPeriod(rs.getString("period"));

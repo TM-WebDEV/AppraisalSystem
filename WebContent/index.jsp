@@ -1,8 +1,8 @@
 <%@ include file="header.jsp"%>
 <div class="container">
 	<div class="row">
-		<div class="col-md-12">
-			<h2>HRD Student Management System</h2>
+		<div class="col-md-12 col-md-offset-2">
+			<h2>LIST OF KEY OBJECTIVE/GOAL</h2>
 		</div>
 	</div>
 

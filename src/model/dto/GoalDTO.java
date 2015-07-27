@@ -4,6 +4,7 @@ public class GoalDTO {
 	private String goalID;
 	private String goal;
 	private String kpi;
+	private String result;
 	private String resource;
 	private int status;
 	private String period;
@@ -55,4 +56,13 @@ public class GoalDTO {
 	public void setPeriod(String period) {
 		this.period = period;
 	}
+
+	public String getResult() {
+		return result;
+	}
+
+	public void setResult(String result) {
+		this.result = result;
+	}
+	
 }

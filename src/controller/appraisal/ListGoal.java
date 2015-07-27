@@ -18,10 +18,12 @@ public class ListGoal implements Action {
 		String goalID = request.getParameter("goal_id");
 		String goal = request.getParameter("goal");
 		String kpi = request.getParameter("kpi");
+		String result = request.getParameter("result");
 		String resource = request.getParameter("resource");
 		String status = request.getParameter("status");
 		String period = request.getParameter("period");
-		ArrayList<GoalDTO> goals = new GoalDAO().listGoal(goalID, goal, kpi, resource, status, period);
+
+		ArrayList<GoalDTO> goals = new GoalDAO().listGoal(goalID, goal, kpi, result, resource, status, period);
 
 		response.setContentType("application/json");
 		response.setCharacterEncoding("UTF-8");

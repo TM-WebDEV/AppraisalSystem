@@ -38,7 +38,7 @@ public class FrontController extends HttpServlet {
 		Action action = null;
 
 		switch (command) {
-		case "/liststudent.eze":
+		case "/listgoal.eze":
 			action = new ListGoal();
 			break;
 		// case "/addstudent.etv":
